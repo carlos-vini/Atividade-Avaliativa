@@ -1,0 +1,238 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ :root{
+    /* ## Colors */
+
+    /* ### Primary */
+    
+    --blue: hsl(246, 80%, 60%);
+    
+    --work: hsl(15, 100%, 70%);
+    --play: hsl(195, 74%, 62%);
+    --study: hsl(348, 100%, 68%);
+    --exercise: hsl(145, 58%, 55%);
+    --social: hsl(264, 64%, 52%);
+    --self-care: hsl(43, 84%, 65%);
+    
+    /* ### Neutral */ 
+    
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+ }
+
+ body, html{
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    color: #FFF;
+ }
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--very-dark-blue);
+}
+
+main{
+    display: grid;
+    grid-template-areas: 
+    "box1 box2 box4 box6"
+    "box1 box3 box5 box7";
+    gap: 30px;
+}
+
+main .box1-name{
+    background-color: var(--dark-blue);
+    border-radius: 20px;
+    grid-area: box1;
+}
+
+main .box2-name{
+    background-color: var(--blue);
+    padding: 35px 120px 70px 28px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+main .box2-name img{
+    width: 80px;
+    border: 3px solid #fff;
+    border-radius: 100px;
+}
+
+main .box2-name p{
+    font-size: .8rem;
+    color: var(--pale-blue);
+}
+
+main .box2-name h1{
+    font-weight: 300;
+    width: 120px;
+}
+
+main .box1-name ul{
+    list-style: none;
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .box1-name ul button{
+    border: none;
+    background: none;
+    color: var(--pale-blue);
+    font-size: 1rem;
+    
+    cursor: pointer;
+}
+
+main .box1-name ul button:hover{
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 1rem;
+    
+    cursor: pointer;
+}
+
+.grid2{
+    display: flex;
+    flex-direction: column;
+}
+
+/* WORK */
+main .box1-work{
+    background: var(--work) url(./images/icon-work.svg);
+    background-repeat: no-repeat;
+    background-position: 90% -5%;
+    background-size: 60px;
+    border-radius: 17px;
+    padding: 40px 0 0 0;
+    
+    grid-area: box2;
+}
+
+/* EXERCISE */
+main .box1-exercise{
+    background: var(--exercise) url(./images/icon-exercise.svg);
+    background-repeat: no-repeat;
+    background-position: 90% 1%;
+    background-size: 60px;
+    border-radius: 17px;
+    padding: 40px 0 0 0;
+    
+    grid-area: box3;
+}
+
+/* PLAY */
+main .box1-play{
+    background: var(--play) url(./images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: 90% -2%;
+    background-size: 60px;
+    border-radius: 17px;
+    padding: 40px 0 0 0;
+    
+    grid-area: box4;
+}
+
+/* SOCIAL */
+main .box1-social{
+    background: var(--social) url(./images/icon-social.svg);
+    background-repeat: no-repeat;
+    background-position: 90% -10%;
+    background-size: 60px;
+    border-radius: 17px;
+    padding: 40px 0 0 0;
+    
+    grid-area: box5;
+}
+
+/* STUDY */
+main .box1-study{
+    background: var(--study) url(./images/icon-study.svg);
+    background-repeat: no-repeat;
+    background-position: 95%-5%;
+    background-size: 60px;
+    border-radius: 17px;
+    padding: 40px 0 0 0;
+    
+    grid-area: box6;
+}
+
+/* SELF CARE */
+main .box1-self-care{
+    background: var(--self-care) url(./images/icon-self-care.svg);
+    background-repeat: no-repeat;
+    background-position: 95% -10%;
+    background-size: 60px;
+    border-radius: 17px;
+    padding: 40px 0 0 0;
+    
+    grid-area: box7;
+}
+
+main .box2{
+    background-color: var(--dark-blue);
+    border-radius: 15px;
+    padding: 30px 20px;
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    cursor: pointer;
+}
+
+main .box2:hover{
+    background-color: hsl(236, 41%, 39%);
+    border-radius: 15px;
+    padding: 30px 20px;
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    cursor: pointer;
+}
+
+main .box2 header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .box2 header h5{
+    font-size: .9rem;
+}
+
+main .box2 .main-box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .box2 p{
+    font-size: .7rem;
+    color: var(--pale-blue);
+}
+
+main .box2 h1{
+    font-weight: 300;
+    font-size: 3rem;
+}
